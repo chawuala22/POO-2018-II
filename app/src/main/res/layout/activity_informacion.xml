@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Lista">
+    tools:context=".Lista"
+    android:orientation="horizontal">
 
 
     <ScrollView
@@ -19,54 +20,65 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/common_google_signin_btn_text_dark_focused"
             android:orientation="vertical" />
     </ScrollView>
 
-    <TextView
-        android:id="@+id/nombre"
-        android:layout_width="75dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="290dp"
-        android:layout_marginLeft="290dp"
-        android:layout_marginTop="27dp"
-        android:text="Nombre" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="276dp"
-        android:layout_height="177dp"
-        android:layout_below="@+id/nombre"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="-19dp"
-        android:src="@mipmap/ic_launcher" />
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/direccion"
-        android:layout_width="76dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/nombre"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="-1dp"
-        android:layout_marginTop="57dp"
-        android:text="Direccion" />
+        <TextView
+            android:id="@+id/nombre"
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="214dp"
+            android:layout_marginLeft="214dp"
+            android:layout_marginTop="40dp"
+            android:text="Nombre" />
 
-    <TextView
-        android:id="@+id/costo"
-        android:layout_width="74dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/direccion"
-        android:layout_alignEnd="@+id/nombre"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="1dp"
-        android:text="Costo" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="228dp"
+            android:layout_height="114dp"
+            android:layout_below="@+id/nombre"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-19dp"
+            android:src="@drawable/park1" />
+
+        <TextView
+            android:id="@+id/direccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/nombre"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="-2dp"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:text="Direccion" />
+
+        <TextView
+            android:id="@+id/costo"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/direccion"
+            android:layout_alignEnd="@+id/nombre"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="77dp"
+            android:text="Costo" />
 
     <TextView
         android:id="@+id/propietario"
-        android:layout_width="75dp"
+        android:layout_width="196dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/nombre"
         android:layout_alignParentTop="true"
@@ -74,23 +86,44 @@
         android:layout_marginTop="82dp"
         android:text="Propietario" />
 
-    <TextView
-        android:id="@+id/horario"
-        android:layout_width="72dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/nombre"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="138dp"
-        android:text="Horario" />
+        <TextView
+            android:id="@+id/horario"
+            android:layout_width="158dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/nombre"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="133dp"
+            android:text="Horario" />
 
-    <TextView
-        android:id="@+id/cupo"
-        android:layout_width="73dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_alignStart="@+id/nombre"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="-37dp"
-        android:text="Cupo" />
+        <TextView
+            android:id="@+id/cupo"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_alignStart="@+id/nombre"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="8dp"
+            android:text="Cupo" />
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+    </RelativeLayout>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mapfirst"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="240dp"
+        tools:context=".MapsActivity" />
+
 </RelativeLayout>
