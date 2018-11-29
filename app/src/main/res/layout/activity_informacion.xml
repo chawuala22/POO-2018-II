@@ -9,121 +9,81 @@
     android:orientation="horizontal">
 
 
-    <ScrollView
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp">
+        android:layout_height="301dp"
+        android:src="@drawable/park1" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/common_google_signin_btn_text_dark_focused"
-            android:orientation="vertical" />
-    </ScrollView>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="193dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginBottom="253dp"
+        android:text="Nombre" />
 
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/nombre"
-            android:layout_width="159dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="214dp"
-            android:layout_marginLeft="214dp"
-            android:layout_marginTop="40dp"
-            android:text="Nombre" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="228dp"
-            android:layout_height="114dp"
-            android:layout_below="@+id/nombre"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="-19dp"
-            android:src="@drawable/park1" />
-
-        <TextView
-            android:id="@+id/direccion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/nombre"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="-2dp"
-            android:layout_marginTop="61dp"
-            android:layout_marginEnd="18dp"
-            android:layout_marginRight="18dp"
-            android:text="Direccion" />
-
-        <TextView
-            android:id="@+id/costo"
-            android:layout_width="81dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/direccion"
-            android:layout_alignEnd="@+id/nombre"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="77dp"
-            android:text="Costo" />
+    <TextView
+        android:id="@+id/direccion"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginBottom="220dp"
+        android:text="Direccion" />
 
     <TextView
         android:id="@+id/propietario"
-        android:layout_width="196dp"
+        android:layout_width="189dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/nombre"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="82dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="187dp"
         android:text="Propietario" />
 
-        <TextView
-            android:id="@+id/horario"
-            android:layout_width="158dp"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/nombre"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="133dp"
-            android:text="Horario" />
-
-        <TextView
-            android:id="@+id/cupo"
-            android:layout_width="193dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView"
-            android:layout_alignStart="@+id/nombre"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="8dp"
-            android:text="Cupo" />
-</RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <TextView
+        android:id="@+id/costo"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginBottom="154dp"
+        android:text="Costo" />
 
-    </RelativeLayout>
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:map="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/mapfirst"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="240dp"
-        tools:context=".MapsActivity" />
+    <TextView
+        android:id="@+id/costo2"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="119dp"
+        android:text="Horario" />
 
+    <TextView
+        android:id="@+id/cupo"
+        android:layout_width="188dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="83dp"
+        android:text="Cupo" />
 </RelativeLayout>
